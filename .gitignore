@@ -1,0 +1,19 @@
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+*.iml
+
+## Directory-based project format:
+.idea/
+
+.DS_Store
+
+.terraform
+
+/node_modules
+.nvmrc
+.aws-sam/
+
+yarn.lock
+
+dist/

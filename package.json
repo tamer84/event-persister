@@ -1,0 +1,20 @@
+{
+  "name": "event-persister",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules/*; rm -rf dist/*",
+    "package": "mkdir dist; cp -R node_modules dist/; cp -R src dist/; cd dist; zip -r $npm_package_name.zip .",
+    "build": "yarn run clean; yarn install --production; yarn run package",
+    "test": "jasmine test/*/**"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "3.7.0",
+    "@aws-sdk/client-eventbridge": "3.7.0",
+    "bunyan": "1.8.15",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "jasmine": "^3.7.0"
+  }
+}
